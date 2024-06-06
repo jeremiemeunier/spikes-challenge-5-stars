@@ -120,3 +120,29 @@ p {
   line-height: 24px;
   font-weight: 400;
 }
+
+@keyframes bump {
+  0% {
+    transform: translateY(15%);
+  }
+
+  25% {
+    transform: translateY(-5%);
+  }
+
+  50% {
+    transform: translateY(10%);
+  }
+
+  75% {
+    transform: translateY(-2%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animation-bump {
+  animation: .3s ease-in-out bump;
+}
