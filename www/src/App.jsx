@@ -8,7 +8,9 @@ const App = () => {
 
   return (
     <>
-      <div className="notation-block">
+      <div
+        className={`notation-block ${notation === 0 ? "animation-bump" : ""}`}
+      >
         <button
           className="reset"
           onClick={(event) => {
@@ -62,6 +64,16 @@ const App = () => {
             notation={notation}
           />
         </div>
+
+        {notation > 0 && (
+          <p>
+            {notation === 1 && "Ce sera pour une prochaine"}
+            {notation === 2 && "Bon c'est pas encore ça"}
+            {notation === 3 && "J'y était presque"}
+            {notation === 4 && "Merci beaucoup !"}
+            {notation === 5 && "C'est toi le meilleur !"}
+          </p>
+        )}
       </div>
     </>
   );
